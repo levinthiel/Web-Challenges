@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: LemonChiffon;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+.title {
+  background-color: white;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+section {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-left: solid 5px orange;
+}
+.favourites {
+  border-left: solid 5px gold;
+}
+
+.subtitle {
+  border-left: gold solid 3px;
+  padding-left: 5px;
+}
+.favourites .subtitle {
+  border-left: orange solid 3px;
+}
+/* add selector */
+.favourites ul {
+  list-style: "🧡";
+  padding-left: 15px;
+}
+
+.image-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Note: After finishing all tasks this class should also work. This means that the image should flexibly adjust its size to the width of the viewport. */

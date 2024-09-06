@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+section {
+  background-color: lemonchiffon;
+  display: grid;
+  place-items: center;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
+
+button {
+  background-color: white;
+  padding: 8px 25px;
+}
+
+.button1 {
+  border-radius: 15px;
+}
+
+.button2 {
+  color: beige;
+  background-color: brown;
+  border: none;
+}
+
+.button3 {
+  font-size: 42px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.button4 {
+  box-shadow: 15px 55px 3px red;
+}

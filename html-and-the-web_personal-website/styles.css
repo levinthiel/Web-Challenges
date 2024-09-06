@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "tilt_warp";
+  src: url("./assets/Tilt_Warp/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf");
+}
+@font-face {
+  font-family: "climate";
+  src: url("./assets/Climate_Crisis/ClimateCrisis-Regular-VariableFont_YEAR.ttf");
+}
+@font-face {
+  font-family: "josefine";
+  src: url("./assets/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf");
+}
+body {
+  background: url("./assets/bg.png") center -50% no-repeat fixed;
+  background-color: #efecdc;
+  font-family: "Courier New", Courier, monospace;
+  color: #1d6b9f;
+  background-size: 700px;
+}
+.container {
+  margin: 0px auto;
+  max-width: 700px;
+}
+/*--------------HEADER*/
+header {
+  padding: 36px 20px 20px 20px;
+  color: #1d6b9f;
+}
+.hi {
+  font-size: 2rem;
+  font-family: josefine;
+  letter-spacing: 20px;
+  text-align: center;
+  word-spacing: 60px;
+}
+.lev {
+  font-size: 9rem;
+  margin-bottom: 15px;
+  font-family: climate;
+  letter-spacing: 30px;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+.port {
+  font-family: josefine;
+  font-size: 2rem;
+  letter-spacing: 7px;
+  text-align: center;
+  word-spacing: 53px;
+  mix-blend-mode: multiply;
+}
+
+/*-----------EOF---HEADER*/
+/*--------------MAIN*/
+main {
+  padding-top: 22px;
+}
+.paragraph {
+  background-color: #efecdc;
+  padding: 60px 40px;
+  width: 100%;
+  border-top: 2px solid #1d6b9f;
+  border-bottom: 2px solid #1d6b9f;
+}
+h3 {
+  font-family: climate;
+  mix-blend-mode: multiply;
+  letter-spacing: 2px;
+}
+h4 {
+  font-family: josefine;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+.fineline {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1d6b9f;
+  mix-blend-mode: multiply;
+}
+.space {
+  width: 100%;
+  display: block;
+  height: 300px;
+}
+
+main p {
+  font-family: josefine;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+main img {
+  margin: 20px 0px 10px 0px;
+  border-radius: 3px;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: hidden;
+}
+figcaption {
+  font-style: italic;
+  font-size: 12px;
+  margin-bottom: 3%;
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#skills ul li {
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+  background-color: #fcd23f;
+  border-radius: 12px;
+  margin: 5px;
+  font-weight: bold;
+  border: 2px solid #1d6b9f;
+  text-transform: uppercase;
+}
+.smallspace {
+  width: 100%;
+  display: block;
+  height: 60px;
+}
+h4 {
+  margin-bottom: 10px;
+}
+/*-----------EOF---MAIN*/
