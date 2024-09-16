@@ -175,7 +175,7 @@ fairly essential to completing this challenge. */
   background-color: var(--eggshell-white);
 }
 
-/* Footer */
+/* --FOOTER ----------------------------------Footer */
 
 .main-footer {
   display: flex;
@@ -207,6 +207,7 @@ fairly essential to completing this challenge. */
 .contact-details p:first-child {
   color: var(--eggshell-white);
 }
+/* --EOF FOOTER ----------------------------------Footer */
 
 /* ==[ MEDIA QUERIES & BREAKPOINTS ]== */
 
@@ -214,7 +215,7 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
+/* -----------------------------------------------Media Query Tablet */
 @media screen and (min-width: 600px) {
   .card-section {
     width: 100%;
@@ -232,8 +233,7 @@ width, etc. */
     width: 48%;
   }
 }
-
-/* Media Query Desktop */
+/*------------------------------------------------------ Media Query Desktop */
 @media screen and (min-width: 1200px) {
   .product-card.--forest{
     width: 100%;
