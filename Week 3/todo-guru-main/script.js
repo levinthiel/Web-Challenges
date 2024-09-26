@@ -5,6 +5,14 @@ const introimg = document.querySelector('[data-js="introimg"]');
 
 let toDoNumber = 0;
 
+const todoColors = [ "#e3e949"," #37c66d" ," #f27942", "#6d87ee" , "#f28fc0", "#f1525d", "#97c9f2", "#0b6cec"]
+//random colors
+function assignRandomColor(element) {
+    const randomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
+    
+    element.style.backgroundColor = randomColor;
+}
+
 form.addEventListener("submit", (event) => {
 
     toDoNumber = toDoNumber + 1; //incrementation for number of todos
@@ -28,6 +36,17 @@ form.addEventListener("submit", (event) => {
     newTodoLi.setAttribute('data-js', `todoLi${toDoNumber}`);
 
     todoList.append(newTodoLi);
+
+    //random colors
+    function assignRandomColor() {
+        const randomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
+        
+        console.log(randomColor);
+        const createdLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`);
+        console.log(createdLi);
+        createdLi.style.background = `${randomColor}`;
+    }
+    assignRandomColor();
 
 
 
