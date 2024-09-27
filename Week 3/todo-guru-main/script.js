@@ -2,24 +2,22 @@ const todoInput = document.querySelector("input");
 const form = document.querySelector("form");
 const todoList = document.querySelector("ul");
 const introimg = document.querySelector('[data-js="introimg"]');
+const clearlist = document.querySelector('[data-js="clearlistbutton"]');
 
 let toDoNumber = 0;
 
+//Selection of random colors------------------------------------------------------------------------------------ 
 const todoColors = [ "#e3e949"," #37c66d" ," #f27942", "#6d87ee" , "#f28fc0", "#f1525d", "#97c9f2", "#0b6cec"]
-//random colors
-function assignRandomColor(element) {
-    const randomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
-    
-    element.style.backgroundColor = randomColor;
-}
+let previousColor ="";
 
+//Function when submit------------------------------------------------------------------------------------ 
 form.addEventListener("submit", (event) => {
 
     toDoNumber = toDoNumber + 1; //incrementation for number of todos
     event.preventDefault();
 
 
-    //Create the todo
+    //Create the todo------------------------------------------------------------------------------------
     const newTodoLi = document.createElement("LI");
 
     newTodoLi.innerHTML = `
@@ -31,35 +29,41 @@ form.addEventListener("submit", (event) => {
 
     newTodoLi.classList.add("todo-item");
     introimg.classList.add("hidden");
+    clearlist.classList.remove("hidden");
     form.classList.add("formuptop");
     document.body.classList.add("removeintroimg");
     newTodoLi.setAttribute('data-js', `todoLi${toDoNumber}`);
 
     todoList.append(newTodoLi);
 
-    //random colors
+    //Asign random colors------------------------------------------------------------------------------------
     function assignRandomColor() {
-        const randomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
-        
-        console.log(randomColor);
-        const createdLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`);
-        console.log(createdLi);
-        createdLi.style.background = `${randomColor}`;
+        let randomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
+
+        if (randomColor !== previousColor ){
+            const createdLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`);
+            createdLi.style.background = `${randomColor}`;
+            return previousColor = randomColor;
+        }else {
+            let otherrandomColor = todoColors[Math.floor(Math.random() * todoColors.length)];
+            const createdLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`);
+            createdLi.style.background = `${otherrandomColor}`;
+        }
     }
     assignRandomColor();
+  
 
 
 
-    //Delete the todo
+    //Delete the todo------------------------------------------------------------------------------------
     const todoLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`);
     const clearbutton = document.querySelector(`[data-js="clearbutton${toDoNumber}"]`);
 
     clearbutton.addEventListener("click", () => {
-        console.log(todoLi);
         todoLi.remove();
     });
 
-    //Finish the todo
+    //Finish the todo------------------------------------------------------------------------------------
     todoLi.addEventListener("click", (event) => {
         const TodoLi = document.querySelector(`[data-js="todoLi${toDoNumber}"]`)
         if (event.target.tagName === "LI") {
@@ -71,7 +75,9 @@ form.addEventListener("submit", (event) => {
     todoInput.focus();
 });
 
-
-
+//clear the list------------------------------------------------------------------------------------
+clearlist.addEventListener("click", () => {
+    todoList.innerHTML="";
+});
 
 
