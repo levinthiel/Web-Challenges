@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+    background-color: #000;
+    background-image:  url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main {
+    display: flex;
+    height: 100%;
+    min-height: 300px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0px auto;
+    width: 60%;
+    padding: 50px;
+    border-radius: 18px;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 50px;    
+}
+h1 span {
+    font-size: 2.5rem;
+    background: #131313;
+    padding: 5px; 
+    border-radius: 5px;
+}
+li {
+    color: aliceblue;
+    list-style: none;
+    text-align: center;
+}
+.buttonbar {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;    
+    text-align: center;
+}
+button {
+    font-weight: bold; 
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+}
