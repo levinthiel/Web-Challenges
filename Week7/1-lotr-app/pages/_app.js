@@ -9,10 +9,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <HomePage/>
-{/*      <Vol1/>
-      <Vol2/>
-      <Vol3/>  */}
+      <Component {...pageProps} />
     </>
   );
 }
